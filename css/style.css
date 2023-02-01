@@ -16,7 +16,6 @@ body{
     background: url(../imgs/img1.png);
     justify-content: center;
     align-items: center;
-    /* gap:10px; */
     gap: 10px;
     height: 2rem;
     position: absolute;
@@ -56,7 +55,7 @@ body{
 
   .map { 
     width: 70%; 
-    background-image: url('../imgs/img3.png'); 
+    background: url("../imgs/img3.png"); 
     background-size: cover; 
   } 
   .options { 
@@ -80,7 +79,7 @@ body{
     color: white; 
   } 
   .location-btns { 
-    margin-top: 50px; 
+    margin-top: 10px; 
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center; 
@@ -110,3 +109,5 @@ body{
       transform: scale(1); 
     } 
   } 
+
+ 
