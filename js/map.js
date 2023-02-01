@@ -5,12 +5,13 @@ const second = ["cave", "tavern", "town"];
 
 const names = [];
 
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
-  }
+}
 
 
-function generateName() {
+function generateLocationName() {
     let rnd1, rnd2;
     rnd1 = getRandomInt(first.length);
     rnd2 = getRandomInt(second.length);
@@ -21,7 +22,7 @@ function generateNamesArray() {
     let array = [];
     let name;
     for(let i = 0; i < 5;) {
-        name = generateName();
+        name = generateLocationName();
         if(array.includes(name) === false) {
             array.push(name);
             ++i;
@@ -40,6 +41,7 @@ function assignNames() {
 } 
 
 assignNames();
+
 
 
 

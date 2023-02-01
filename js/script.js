@@ -25,7 +25,7 @@ let player = {
 const nameInput = document.querySelector('#name');
 const strengthInput = document.querySelector('#strength');
 const defenseInput = document.querySelector('#defense');
-const dexterityInput = document.query('#dexterity');
+const dexterityInput = document.querySelector('#dexterity');
 
 //image buttons
 const left = document.querySelector('#left');
@@ -33,7 +33,7 @@ const right = document.querySelector('#right');
 let imgIndex = 1;
 
 //image
-const image = document.querySelector('img');
+const image = document.querySelector('#image');
 
 
 // finish
@@ -55,16 +55,18 @@ finish.addEventListener('click', function(e) {
 
 
 left.addEventListener('click', function(event) {
-    if(imgIndex !== 1) --imgIndex;
-    image.src = `../assets/img-${imgIndex}.png`;
+    event.preventDefault();
+    if(imgIndex > 1) --imgIndex;
+    image.src = `../imgs/caracters/img-${imgIndex}.png`;
 });
 right.addEventListener('click', function(event) {
-    if(imgIndex < 10) ++imgIndex;
-    image.src = `../assets/img-${imgIndex}.png`;
+    event.preventDefault();
+    if(imgIndex <= 3) ++imgIndex;
+    image.src = `../imgs/caracters/img-${imgIndex}.png`;
 });
 
 
 
 
 
-
+image.src = `../imgs/caracters/img-${imgIndex}.png`;

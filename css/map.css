@@ -56,16 +56,30 @@ body{
 
   .map { 
     width: 70%; 
-    background-image: url('../imgs/img3.png'); 
     background-size: cover; 
-  } 
+  }
+  
+
+  .map-container {
+    display: flex;
+
+  }
+
+  .map-container .map img {
+    object-fit: cover;
+    margin-top: 7rem;
+    width: 100%;
+  }
+
+
   .options { 
-    width: 30%; 
+    width: 20%; 
     background-color: white; 
     display: flex; 
     flex-direction: column; 
     align-items: center; 
     padding-top: 50px; 
+    height: 100vh;
   } 
   nav { 
     width: 100%; 

@@ -4,17 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/character.css">
     <title>Document</title>
+    <script src="../js/script.js" defer></script>
 </head>
 <body>
-    <input type="text" id="name">
-    <input type="number" id="strength">
-    <input type="number" id="defense">
-    <input type="number" id="dexterity">
-
-    <button id="finish"></button>
-
-    <button id="left"></button>
-    <button id="right"></button>
+    <div class="containerCardCharacter">
+        <div class="playerInformation">
+            <h1>Player Character</h1>
+            <h3>Player name:</h3>
+            <input type="text" id="name">
+            <h3> Player Strength:</h3>
+            <input type="number" id="strength">
+            <h3>Defense Rating:</h3>
+            <input type="number" id="defense">
+            <h3>Dexterity Rating:</h3>
+            <input type="number" id="dexterity">
+        </div>
+        <div class="selectImg">
+            <div class="slectingImg">
+            <img id="image" src="" alt="">
+        </div>
+            <div class="carcterBtns">
+                <div id="left" class="btn">Previous</div>
+                <div id="right" class="btn">Next</div>
+            </div>
+        </div>
+    </div>
+    <button id="finish" class="finish btn">Finish</button>
 </body>
 </html>
