@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: url(/JS-bootcamp-rpg-game/imgs/locations/img-4.jpg);
+    align-items: center;
+  }
+  .containerCards{
+    display: flex;
+  }
+  h1 {
+    margin-top: 50px;
+    font-size: 36px;
+  }
+  .cards-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .card {
+    width: 45%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    margin: 25px;
+    border-radius: 10px;
+    box-shadow: 5px 5px lightgray;
+  }
+  h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  .card-btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    height:90px;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+    margin: 20px;
+  }
+  button:hover {
+    background-color: rgb(27, 81, 98);
+  }
+  @media  screen and (max-width:768px) {
+    .containerCards{
+        display: flex;
+        flex-direction: column;
+    }
+  }
