@@ -17,7 +17,8 @@ let player = {
 	lvl: 1,
 	life: 50,
     currentXP: 0,
-    currentGold: 0
+    currentGold: 0,
+    image: 0
 }
 
 
@@ -47,7 +48,8 @@ finish.addEventListener('click', function(e) {
     player.str = strengthInput.value;
     player.def = defenseInput.value;
     player.dex = dexterityInput.value;
-    
+    player.image = imgIndex;
+
     localStorage.setItem('player', JSON.stringify(player));
     window.location = "../html/map.html";
 });

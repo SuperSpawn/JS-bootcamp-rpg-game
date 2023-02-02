@@ -7,9 +7,10 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background: url(/JS-bootcamp-rpg-game/imgs/locations/img-4.jpg);
+    background: url('../imgs/locations/img-4.jpg');
     align-items: center;
   }
+
   .combat-container { 
     display: flex; 
     flex-direction: column; 
@@ -74,3 +75,4 @@
       flex-direction: column; 
     } 
   } 
+

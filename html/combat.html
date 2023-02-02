@@ -4,31 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/JS-bootcamp-rpg-game/css/combat.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/combat.css">
+    <title>Combat Arena</title>
+    <script src="../js/combat.js" defer></script>
 </head>
 <body>
   <h1 style="text-align:center; margin-top:50px;">Monster is attacking player</h1> 
   <div class="combat-container"> 
     <div class="cards-section"> 
-      <div class="card attacking"> 
-        <img src="https://i.picsum.photos/id/237/200/300.jpg" alt="Monster Image">
-        <h1>Monster<h2>
-        <p>Health: 50</p> 
-        <p>Exp: 40</p> 
-        <p>Level: 5</p> 
+      <div id="monster-card" class="card attacking"> 
+        <img id="monster-image" src="../imgs/monsters/images.png" >
+        <h2 id="monster-name">Monster<h2>
+        <p id="monster-health">Health: 100</p>
+         <p id="monster-xp">Exp: 50</p>
+        <p id="monster-level">Level: 5</p>
       </div> 
       <div class="btns-section"> 
-        <button>Attack</button> 
-        <button>Choose Attack</button> 
-        <button>Run Away</button>
+        <button id="attack">Attack</button> 
+        <button id="drink-potion">Drink potion</button> 
+        <button id="run-away">Run Away</button>
       </div> 
-      <div class="card"> 
-        <img src="https://i.picsum.photos/id/100/200/300.jpg" alt="Player Image"> 
-        <h1>Player<h1>
-        <p>Health: 80</p> 
-        <p>Exp: 70</p> 
-        <p>Level: 7</p> 
+      <div id="plauer-card" class="card"> 
+        <h2 id="player-name">Player</h2>
+        <img id="player-image" src ="../imgs/02caracters/img-3.png">
+        <p id="player-health">Health: 80</p>
+        <p id="player-xp">Exp: 30</p>
+        <p id="player-level">Level: 3</p>
       </div> 
     </div> 
   </div> 
