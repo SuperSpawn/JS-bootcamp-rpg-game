@@ -16,13 +16,14 @@
     flex-direction: column; 
     align-items: center; 
     height: 100vh; 
+    width: 100%;
   } 
   .cards-section { 
     display: flex; 
     justify-content: center; 
     width: 100%; 
     margin-top: 50px; 
-    flex-wrap: wrap; 
+    flex-wrap: nowrap;  
   } 
   .card { 
     background-color: #f2f2f2; 
@@ -45,6 +46,7 @@
   .btns-section { 
     display: flex; 
     justify-content: center; 
+    align-items: center;
     width: 100%; 
     margin-top: 50px; 
   } 
@@ -54,7 +56,8 @@
     padding: 14px 20px; 
     border: none; 
     border-radius: 10px; 
-    cursor: pointer; 
+    cursor: pointer;
+    height: 30%; 
     margin: 20px; 
   } 
   .attacking { 
@@ -74,5 +77,8 @@
       margin-top: 20px; 
       flex-direction: column; 
     } 
+    .cards-section {
+      flex-wrap: wrap;
+    }
   } 
 
