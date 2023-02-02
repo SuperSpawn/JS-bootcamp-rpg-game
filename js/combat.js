@@ -138,6 +138,8 @@ function turn() {
         else {
             //reward player
             rewardPlayer();
+            localStorage.setItem('player', JSON.stringify(player));
+
             //remove monster from list
             array.splice(index, 1);
             localStorage.setItem(`monsters-${_location}`, JSON.stringify(array));
@@ -156,7 +158,7 @@ function rewardPlayer() {
     player.currentXP += monster.xpReward;
     if(player.currentXP >= 1000) {
         player.currentXP -= 1000;
-        player.lvl++;
+        player.lvl += 1;
     }
 }
 
@@ -232,7 +234,7 @@ attack.addEventListener('click', function(e) {
     if(whosTurn === 0) {
         turn();
         whosTurn = 1;
-        setTimeout(turn(), 5000);
+        turn();
     }   
 })
 runAway.addEventListener('click', function(e) {
