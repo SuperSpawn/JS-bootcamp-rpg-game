@@ -143,9 +143,9 @@ function turn() {
             //remove monster from list
             array.splice(index, 1);
             localStorage.setItem(`monsters-${_location}`, JSON.stringify(array));
-            
+
             //battle over
-            window.location = '../html/map.html';
+            window.location = '../html/map.html'
         }
     }
 
@@ -235,6 +235,7 @@ attack.addEventListener('click', function(e) {
         turn();
         whosTurn = 1;
         turn();
+        whosTurn = 0;
     }   
 })
 runAway.addEventListener('click', function(e) {
