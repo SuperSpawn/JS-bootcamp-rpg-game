@@ -10,67 +10,69 @@
     background: url('../imgs/locations/img-4.jpg');
     align-items: center;
   }
-  .containerCards{
-    display: flex;
-  }
-  h1 {
-    margin-top: 50px;
-    font-size: 36px;
-  }
-  .cards-container {
-    display: flex;
-    flex-direction: row;
-  }
-  .card {
-    width: 45%;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px;
-    margin: 25px;
-    border-radius: 10px;
-    box-shadow: 5px 5px lightgray;
-  }
-  h2 {
-    margin-bottom: 25px;
-    font-size: 24px;
-  }
-  p {
-    font-size: 18px;
-    margin-bottom: 25px;
-  }
-  .card-btns {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    height:90px;
-  }
-  button {
-    padding: 10px 20px;
-    background-color: lightblue;
-    border: none;
-    border-radius: 10px;
-    color: black;
-    cursor: pointer;
-    margin: 20px;
-  }
-  button:hover {
-    background-color: rgb(27, 81, 98);
-  }
-  @media  screen and (max-width:768px) {
-    .containerCards{
-        display: flex;
-        flex-direction: column;
-    }
-  }
 
-
-
-
-.turn {
-  /* sfhfhfhfhfh */
-}
-
-
+  .combat-container { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    height: 100vh; 
+  } 
+  .cards-section { 
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
+    margin-top: 50px; 
+    flex-wrap: wrap; 
+  } 
+  .card { 
+    background-color: #f2f2f2; 
+    width: 40%; 
+    height: 400px; 
+    border-radius: 10px; 
+    margin: 20px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    box-shadow: 2px 2px #888888; 
+  } 
+  .card img { 
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    margin-bottom: 20px; 
+  } 
+  .btns-section { 
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
+    margin-top: 50px; 
+  } 
+  button { 
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 14px 20px; 
+    border: none; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    margin: 20px; 
+  } 
+  .attacking { 
+    border: 2px solid red; 
+    background: brown;
+    color:white;
+    
+  } 
+  @media only screen and (max-width: 767px) { 
+    .card { 
+      width: 80%; 
+    } 
+    .btns-section { 
+      display: flex; 
+      justify-content: center; 
+      width: 100%; 
+      margin-top: 20px; 
+      flex-direction: column; 
+    } 
+  } 
 
