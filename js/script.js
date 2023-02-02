@@ -16,7 +16,7 @@ let player = {
 	def: 0,
 	lvl: 1,
 	life: 50,
-    currentXP: 0,
+    currentXP: 999,
     currentGold: 0,
     image: 0
 }
