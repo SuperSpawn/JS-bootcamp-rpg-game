@@ -15,7 +15,7 @@ let player = {
 	dex: 0,
 	def: 0,
 	lvl: 1,
-	life: 500,
+	life: 1000,
     currentXP: 999,
     currentGold: 0,
     image: 0
