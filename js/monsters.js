@@ -195,6 +195,7 @@ function addEventListeners() {
         cards[i].addEventListener('click', function(e) {
             e.preventDefault();
             //send monster to combat
+            localStorage.setItem('enemy-index', i.toString());
             localStorage.setItem('enemy', JSON.stringify(fiends[i]));
             //go to combat.html
             window.location = '../html/combat.html'
