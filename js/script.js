@@ -15,7 +15,7 @@ let player = {
 	dex: 0,
 	def: 0,
 	lvl: 1,
-	life: 50,
+	life: 500,
     currentXP: 999,
     currentGold: 0,
     image: 0
@@ -59,16 +59,16 @@ finish.addEventListener('click', function(e) {
 left.addEventListener('click', function(event) {
     event.preventDefault();
     if(imgIndex > 1) --imgIndex;
-    image.src = `../imgs/caracters/img-${imgIndex}.png`;
+    image.src = `../imgs/02caracters/img-${imgIndex}.png`;
 });
 right.addEventListener('click', function(event) {
     event.preventDefault();
     if(imgIndex <= 3) ++imgIndex;
-    image.src = `../imgs/caracters/img-${imgIndex}.png`;
+    image.src = `../imgs/02caracters/img-${imgIndex}.png`;
 });
 
 
 
 
 
-image.src = `../imgs/caracters/img-${imgIndex}.png`;
+image.src = `../imgs/02caracters/img-${imgIndex}.png`;

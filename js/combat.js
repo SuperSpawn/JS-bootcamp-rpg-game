@@ -90,8 +90,15 @@ function whoStartsFirst() {
     }
 
     whosTurn = (playerScore > monsterScore) ? 0 : 1; 
-
     
+    if(whosTurn === 0) {
+        playerCard.classList.add('attacking');
+    }
+    else {
+        monsterCard.classList.add('attacking');
+    }
+
+
 }
 
 
@@ -121,6 +128,7 @@ function turn() {
         monsterCard.classList.add('attacking');
     }
 
+    
 
     if(actors[whosTurn].life <= 0) {
         if(whosTurn === 0) {
@@ -218,11 +226,13 @@ whoStartsFirst();
 displayMonster();
 displayPlayer();
 
+
+
 attack.addEventListener('click', function(e) {
     if(whosTurn === 0) {
         turn();
         whosTurn = 1;
-        turn();
+        setTimeout(turn(), 5000);
     }   
 })
 runAway.addEventListener('click', function(e) {
