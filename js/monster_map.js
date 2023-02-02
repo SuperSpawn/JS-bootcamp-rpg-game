@@ -1,4 +1,7 @@
 
+let monsters = [];
+
+
 let monster = {
     name: '',
     str: 0,
@@ -14,8 +17,23 @@ let monster = {
 const prefix = ["the strong", "the speedy", "the ugly", "the evil"];
 const suffix = ["viper", "rock", "fiend", "monster", "googly"];
 
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
+}
+
+function generateIndex() {
+    let original = [1,2,3,4,5,6,7,8,9,10];
+    let i, number, swap;
+
+    for(i = 0; i < 10; ++i) {
+        number = 1 + getRandomInt(9);
+        swap = original[i];
+        original[i] = original[number];
+        original[number] = swap;
+    }
+
+    return original;
 }
 
 function generateMonsterName() {
@@ -49,10 +67,6 @@ function generateMonster() {
 }
 
 
-
-let monsters = [];
-
-
 function generateMonsterNames(number) {
     let array = [];
     let name;
@@ -69,79 +83,70 @@ function generateMonsterNames(number) {
 function generateMonsters(number) {
     let names = generateMonsterNames(number);
     let i;
+    let images = generateIndex();
+    let fiends = [];
 
     for(i = 0; i < number; i++) {
-        monsters.push(generateMonster());
+        fiends.push(generateMonster());
     }   
 
     for(i = 0; i < number; ++i) {
-        monsters[i].name = names[i];
+        fiends[i].name = names[i];
     }
+    for(i = 0; i < number; ++i) {
+        fiends[i].image = images[i];
+    }
+    return fiends;
 }
 
 
-let numberOfMonsters = 3 + getRandomInt(7);
-
-//objects
-const locationName = document.querySelector('#location-name');
-const monsterCards = document.querySelectorAll('#monster-list .monster-card');
-const photos = document.querySelectorAll('#monster-list .monster-card .image');
-
-
-let photoIndex = [];
-
-
-function generateIndex() {
-    let original = [1,2,3,4,5,6,7,8,9,10];
-    let i, number, swap;
-
-    for(i = 0; i < 10; ++i) {
-        number = 1 + getRandomInt(9);
-        swap = original[i];
-        original[i] = original[number];
-        original[number] = swap;
-    }
-
-    photoIndex = original;
-}
-
-
-function displayCards() {
+function generateLocationMonsters(number) {
     let i;
-    for(i = numberOfMonsters; i < monsterCards.length; ++i) {
-        monsterCards[i].classList.add('hidden');
+    let rnd;
+    for(i = 0; i < number; ++i) {
+        rnd = getRandomInt(7) + 3;
+        monsters.push(generateMonsters(rnd));
+
+        localStorage.setItem(`monsters-${i}-size`, rnd.toString());
+        localStorage.setItem(`monsters-${i}`, JSON.stringify(monsters[i]));
     }
 }
 
-function displayMonsters() {
-    let i;
-    for(i = 0; i < numberOfMonsters; i++) {
-        monsterCards[i].querySelector('.name').innerText = monsters[i].name;
-        monsterCards[i].querySelector('.gold-reward').innerText = monsters[i].goldReward;
-        monsterCards[i].querySelector('.xp-reward').innerText = monsters[i].xpReward;
-        monsterCards[i].querySelector('.level').innerText = monsters[i].lvl;
-        monsterCards[i].querySelector('.life').innerText = monsters[i].life;
-    }
+
+
+generateLocationMonsters(5);
+
+
+
+
+// button stuff
+
+let i;
+const locButtons = document.querySelectorAll('.location');
+
+function pressButton(number) {
+    //goto location
+    //set index to number
+    localStorage.setItem('location', number);
 }
 
-function displayImages() {
-    for(let i = 0; i < numberOfMonsters; i++) {
-        photos[i].src = `../imgs/monsters/img-${photoIndex[i]}.png`;
-    }
+function addEventButtons() {
+    locButtons[0].addEventListener('click', function (e) {
+        pressButton('0');
+    });
+    locButtons[1].addEventListener('click', function (e) {
+        pressButton('1');
+    });
+    locButtons[2].addEventListener('click', function (e) {
+        pressButton('2');
+    });
+    locButtons[3].addEventListener('click', function (e) {
+        pressButton('3');
+    });
+    locButtons[4].addEventListener('click', function (e) {
+        pressButton('4');
+    });
+    
 }
 
-generateMonsters(numberOfMonsters);
-displayCards();
-displayMonsters();
-
-generateIndex();
-displayImages();
-
-
-
-
-
-
-
-
-
+addEventButtons();

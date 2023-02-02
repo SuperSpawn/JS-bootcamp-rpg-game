@@ -23,7 +23,7 @@ body{
     width: 100%;
 }
 
- a{
+a {
     text-decoration: none;
     color: #fff;
 }
@@ -99,7 +99,7 @@ body{
     flex-wrap: wrap; 
     justify-content: center; 
   } 
-  button { 
+  .location { 
     margin: 20px; 
     padding: 20px 40px; 
     background-color: lightblue; 
@@ -108,7 +108,7 @@ body{
     color: white; 
     cursor: pointer; 
   } 
-  button:hover { 
+  .location:hover { 
     background-color: blue;
     animation: hover-effect 0.5s ease-in-out;  
   } 
